@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="parentStackPane" prefHeight="800.0" prefWidth="1375.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.ensate.demandesetudiants.controllers.AdminDemandesDashboardController">
+    <children>
+        <AnchorPane fx:id="parentAnchorPane" prefHeight="800.0" prefWidth="1310.0" style="-fx-background-color: #fff;">
+            <children>
+      
+                <AnchorPane id="AnchorPane" fx:id="Constant_form" layoutX="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="800.0" prefWidth="1310.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Pane layoutX="-2.0" prefHeight="94.0" prefWidth="1390.0" styleClass="head-background" stylesheets="@static/css/application.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label layoutX="218.0" prefHeight="19.0" prefWidth="97.0" text="Ensa" textFill="WHITE">
+                                    <font>
+                                        <Font size="36.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="218.0" layoutY="40.0" prefHeight="53.0" prefWidth="142.0" text="Tetouan" textFill="WHITE">
+                                    <font>
+                                        <Font size="36.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="-1.0" layoutY="118.0" prefHeight="547.0" prefWidth="240.0">
+                            <children>
+                                <VBox prefHeight="509.0" prefWidth="229.0">
+                                    <children>
+                                        <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleHomeAction" onMouseClicked="#handleHomeAction" onMousePressed="#handleHomeAction" prefHeight="43.0" prefWidth="242.0" styleClass="side-button" stylesheets="@static/css/application.css" text="Accueil" textFill="#5b5858">
+                                            <VBox.margin>
+                                                <Insets top="120.0" />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets left="50.0" />
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@static/images/Home.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+
+                                              </Button>
+                                        <Button fx:id="btnDemEnAtt" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#handleDemandesAction" onMouseClicked="#handleDemandesAction" onMousePressed="#handleDemandesAction" prefHeight="43.0" prefWidth="242.0" styleClass="side-button" stylesheets="@static/css/application.css" text="Demandes en attente" textFill="#5b5858">
+                                            <padding>
+                                                <Insets left="50.0" />
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@static/images/Demande.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+
+                                              </Button>
+                                        <Button fx:id="btnHistorique" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="129.0" mnemonicParsing="false" onAction="#handleHistoriquesAction" onMouseClicked="#handleHistoriquesAction" onMousePressed="#handleHistoriquesAction" prefHeight="43.0" prefWidth="242.0" styleClass="side-button" stylesheets="@static/css/application.css" text="Historique" textFill="#5b5858">
+                                            <padding>
+                                                <Insets left="50.0" />
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@static/images/Historique.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+
+                                              </Button>
+                                        <Button fx:id="btnLogout" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleLogoutAction" onMouseClicked="#handleLogoutAction" onMousePressed="#handleLogoutAction" prefHeight="43.0" prefWidth="242.0" styleClass="side-button" stylesheets="@static/css/application.css" text="Se deconnecter" textFill="#5b5858">
+                                            <padding>
+                                                <Insets left="50.0" />
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@static/images/Logout.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+
+                                              </Button>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="72.0" layoutY="32.0">
+                            <children>
+                                <ImageView fitHeight="104.0" fitWidth="153.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@static/images/LogoBackgroundBlanc.jpg" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <Separator cache="true" halignment="LEFT" layoutX="241.0" layoutY="104.0" orientation="VERTICAL" prefHeight="694.0" prefWidth="0.0">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </Separator>
+                        <Separator layoutX="211.0" layoutY="104.0" prefHeight="3.0" prefWidth="27.0" />
+                        <Separator layoutY="98.0" prefHeight="11.0" prefWidth="71.0" />
+                    </children>
+                </AnchorPane>
+      
+                  
+                        
+                <AnchorPane fx:id="Home_form" layoutX="259.0" layoutY="98.0" prefHeight="550.0" prefWidth="1120.0" style="-fx-background-color: #fff;">
+                    <children>
+                        <AnchorPane layoutY="14.0" prefHeight="172.0" prefWidth="1216.0" stylesheets="@static/css/application.css">
+                            <styleClass>
+                                <String fx:value="Shadow" />
+                                <String fx:value="White-bg" />
+                            </styleClass>
+                            <children>
+                                <AnchorPane layoutX="32.0" layoutY="11.0" prefHeight="150.0" prefWidth="220.0" styleClass="card" stylesheets="@static/css/application.css">
+                                    <children>
+                                        <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="21.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@static/images/student_icon.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label fx:id="prepa_number" alignment="CENTER_RIGHT" layoutX="3.0" layoutY="17.0" prefHeight="30.0" prefWidth="213.0" text="0 Etudiants" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="32.0" layoutY="118.0" prefHeight="21.0" prefWidth="165.0" text="Classes Preparatoires" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="328.0" layoutY="11.0" prefHeight="150.0" prefWidth="220.0" styleClass="card" stylesheets="@static/css/application.css">
+                                    <children>
+                                        <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="17.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@static/images/student_icon.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label fx:id="inge_number" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="17.0" prefHeight="30.0" prefWidth="208.0" text="0 Etudiants" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="34.0" layoutY="115.0" prefHeight="21.0" prefWidth="165.0" text="Cycle d'ingenieur" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="649.0" layoutY="11.0" prefHeight="150.0" prefWidth="220.0" styleClass="card" stylesheets="@static/css/application.css">
+                                    <children>
+                                        <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="24.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@static/images/document_icon.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label fx:id="demandes_number" alignment="CENTER_RIGHT" layoutX="2.0" layoutY="8.0" prefHeight="30.0" prefWidth="216.0" text="0 " textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="46.0" layoutY="115.0" prefHeight="21.0" prefWidth="165.0" text="Demandes en attente" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="960.0" layoutY="11.0" prefHeight="150.0" prefWidth="220.0" styleClass="card" stylesheets="@static/css/application.css">
+                                    <children>
+                                        <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="17.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@static/images/historique_icon.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label fx:id="historiques_number" alignment="CENTER_RIGHT" layoutX="2.0" prefHeight="30.0" prefWidth="216.0" text="0 " textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="30.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="39.0" layoutY="112.0" prefHeight="23.0" prefWidth="165.0" text="Demandes traitées" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="194.0" prefHeight="495.0" prefWidth="1216.0" stylesheets="@static/css/application.css">
+                            <styleClass>
+                                <String fx:value="Shadow" />
+                                <String fx:value="White-bg" />
+                            </styleClass>
+                            <children>
+                                <BarChart fx:id="home_chart" layoutX="18.0" layoutY="8.0" prefHeight="487.0" prefWidth="1144.0" title="Vue generale de damandes en attente">
+                                    <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                    </yAxis>
+                                </BarChart>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+
+
+
+
+               <!-- <AnchorPane fx:id="Historique_form" layoutX="361.0" layoutY="98.0" prefHeight="543.0" prefWidth="1209.0" style="-fx-background-color: #fff;" visible="false">
+                    <children>
+                        <AnchorPane prefHeight="543.0" prefWidth="1008.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="231.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="527.0" prefWidth="180.0" stylesheets="@static/css/application.css">
+                                    <styleClass>
+                                        <String fx:value="Shadow" />
+                                        <String fx:value="White-bg" />
+                                    </styleClass>
+                                    <children>
+                                        <Button fx:id="btnDownload" layoutX="12.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleDecisionButton" prefHeight="37.0" prefWidth="149.0" styleClass="btn-download" stylesheets="@static/css/application.css" text="Telecharger" />
+                                        <Button fx:id="btnRenvoyer" layoutX="12.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleDecisionButton" prefHeight="37.0" prefWidth="149.0" styleClass="btn-validate" stylesheets="@static/css/application.css" text="Renvoyer" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="205.0" layoutY="16.0" prefHeight="527.0" prefWidth="803.0" stylesheets="@static/css/application.css">
+                                    <styleClass>
+                                        <String fx:value="Shadow" />
+                                        <String fx:value="White-bg" />
+                                    </styleClass>
+                                    <children>
+                                        <TextField fx:id="searchFiel" layoutX="35.0" layoutY="14.0" onKeyTyped="#DemandesSearch" prefHeight="25.0" prefWidth="448.0" promptText="Search" styleClass="search" stylesheets="@static/css/application.css" />
+                                        <TableView fx:id="historiques_TableView" layoutX="36.0" layoutY="51.0" prefHeight="471.0" prefWidth="732.0">
+                                            <columns>
+                                                <TableColumn fx:id="historiques_TableView_App_col" prefWidth="75.0" text="Apogee" />
+                                                <TableColumn fx:id="historiques_TableView_Nom_col" prefWidth="123.33331298828125" text="Nom" />
+                                                <TableColumn fx:id="historiques_TableView_Pre_col" prefWidth="173.33331298828125" text="Prenom" />
+                                                <TableColumn fx:id="historiques_TableView_Fil_col" prefWidth="75.0" text="Filiere" />
+                                                <TableColumn fx:id="historiques_TableView_NivDoc_col" prefWidth="123.33331298828125" text="Niveau du document" />
+                                                <TableColumn fx:id="historiques_TableView_Doc_col" prefWidth="155.111083984375" text="Document" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+
+
+
+                <AnchorPane fx:id="Demandes_choix_form" layoutX="365.0" layoutY="108.0" prefHeight="543.0" prefWidth="1227.0" style="-fx-background-color: #fff;" visible="false">
+                    <children>
+                        <AnchorPane prefHeight="543.0" prefWidth="1013.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <GridPane hgap="20.0" layoutX="179.0" layoutY="166.0" prefHeight="358.0" prefWidth="679.0" vgap="20.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.66668701171875" minWidth="10.0" prefWidth="334.66668701171875" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="325.33331298828125" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Button fx:id="btnAttReus" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="176.0" prefWidth="339.0" styleClass="btn-choice" stylesheets="@static/css/application.css" text="Attestations de Reussite" textFill="#5b5858">
+                                            <graphic>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@static/images/Attestation_de_reussite_logo.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnRelNotes" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="176.0" prefWidth="339.0" styleClass="btn-choice" stylesheets="@static/css/application.css" text="Rélevées des Notes" textFill="#5b5858" GridPane.rowIndex="1">
+                                            <graphic>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@static/images/Relevee_des_notes_logo.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnConvStage" contentDisplay="TOP" layoutX="10.0" layoutY="187.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="176.0" prefWidth="339.0" styleClass="btn-choice" stylesheets="@static/css/application.css" text="Conventions de stage" textFill="#5b5858" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <graphic>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@static/images/Convention_de_stage_logo.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnAttScol" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="176.0" prefWidth="339.0" styleClass="btn-choice" stylesheets="@static/css/application.css" text="Attestations de Scolarité" textFill="#5b5858" GridPane.columnIndex="1">
+                                            <graphic>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@static/images/Attestation_de_scolarité_logo.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </GridPane>
+                                <AnchorPane fx:id="title_historiques" layoutX="70.0" layoutY="14.0" prefHeight="127.0" prefWidth="930.0" stylesheets="@static/css/application.css">
+                                    <styleClass>
+                                        <String fx:value="Shadow" />
+                                        <String fx:value="White-bg" />
+                                    </styleClass>
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="140.0" layoutY="24.0" prefHeight="71.0" prefWidth="573.0" text="Gestion de l'historique des demandes " textFill="#5347ca">
+                                            <font>
+                                                <Font name="System Bold Italic" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="title_demandes" layoutX="70.0" layoutY="14.0" prefHeight="127.0" prefWidth="927.0" stylesheets="@static/css/application.css">
+                                    <styleClass>
+                                        <String fx:value="Shadow" />
+                                        <String fx:value="White-bg" />
+                                    </styleClass>
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="140.0" layoutY="24.0" prefHeight="71.0" prefWidth="573.0" text="Gestion des demandes en attentes" textFill="#5347ca">
+                                            <font>
+                                                <Font name="System Bold Italic" size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+
+                                    
+                                    
+                                                    <AnchorPane fx:id="Email_form" layoutX="585.0" layoutY="100.0" prefHeight="558.0" prefWidth="748.0" styleClass="Shadow" stylesheets="@static/css/application.css" visible="false">
+                    <children>
+                        <TextArea fx:id="txtAreaReason" layoutX="-241.0" prefHeight="558.0" prefWidth="670.0" promptText="Explain" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="btnEnvoyer" layoutX="644.0" layoutY="511.0" mnemonicParsing="false" onAction="#handleDecisionButton" prefHeight="40.0" prefWidth="94.0" text="Envoyer">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>-->
+
+
+                
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

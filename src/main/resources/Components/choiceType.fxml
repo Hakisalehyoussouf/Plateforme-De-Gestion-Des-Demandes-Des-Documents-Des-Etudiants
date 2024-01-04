@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Demandes_choix_form" prefHeight="543.0" prefWidth="1227.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="543.0" prefWidth="1013.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane hgap="20.0" layoutX="179.0" layoutY="166.0" prefHeight="358.0" prefWidth="679.0" vgap="20.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="334.66668701171875" minWidth="10.0" prefWidth="334.66668701171875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" prefWidth="325.33331298828125" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="btnAttReus" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleTypeAction" onMouseClicked="#handleTypeAction" onMousePressed="#handleTypeAction" prefHeight="176.0" prefWidth="339.0" styleClass="btn-choice" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css" text="Attestations de Reussite" textFill="#5b5858">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/images/Attestation_de_reussite_logo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRelNotes" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleTypeAction" onMouseClicked="#handleTypeAction" onMousePressed="#handleTypeAction" prefHeight="176.0" prefWidth="339.0" styleClass="btn-choice" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css" text="Rélevées des Notes" textFill="#5b5858" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/images/Relevee_des_notes_logo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnConvStage" contentDisplay="TOP" layoutX="10.0" layoutY="187.0" mnemonicParsing="false" onAction="#handleTypeAction" onMouseClicked="#handleTypeAction" onMousePressed="#handleTypeAction" prefHeight="176.0" prefWidth="339.0" styleClass="btn-choice" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css" text="Conventions de stage" textFill="#5b5858" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/images/Convention_de_stage_logo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnAttScol" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleTypeAction" onMouseClicked="#handleTypeAction" onMousePressed="#handleTypeAction" prefHeight="176.0" prefWidth="339.0" styleClass="btn-choice" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css" text="Attestations de Scolarité" textFill="#5b5858" GridPane.columnIndex="1">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/images/Attestation_de_scolarité_logo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+            <AnchorPane fx:id="title_historiques" layoutX="70.0" layoutY="14.0" prefHeight="127.0" prefWidth="930.0" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css" visible="false">
+               <styleClass>
+                  <String fx:value="Shadow" />
+                  <String fx:value="White-bg" />
+               </styleClass>
+               <children>
+                  <Label alignment="CENTER" layoutX="140.0" layoutY="24.0" prefHeight="71.0" prefWidth="573.0" text="Gestion de l'historique des demandes " textFill="#5347ca">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="title_demandes" layoutX="70.0" layoutY="14.0" prefHeight="127.0" prefWidth="927.0" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css">
+               <styleClass>
+                  <String fx:value="Shadow" />
+                  <String fx:value="White-bg" />
+               </styleClass>
+               <children>
+                  <Label alignment="CENTER" layoutX="140.0" layoutY="24.0" prefHeight="71.0" prefWidth="573.0" text="Gestion des demandes en attentes" textFill="#5347ca">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="Historique_form" prefHeight="543.0" prefWidth="1241.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="543.0" prefWidth="1242.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="581.0" prefWidth="180.0" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css">
+               <styleClass>
+                  <String fx:value="Shadow" />
+                  <String fx:value="White-bg" />
+               </styleClass>
+               <children>
+                  <Button fx:id="btnDownload" layoutX="12.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleDecisionButton" onMouseClicked="#handleDecisionButton" onMousePressed="#handleDecisionButton" prefHeight="37.0" prefWidth="149.0" styleClass="btn-download" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css" text="Telecharger" />
+                  <Button fx:id="btnRenvoyer" layoutX="12.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleDecisionButton" onMouseClicked="#handleDecisionButton" onMousePressed="#handleDecisionButton" prefHeight="37.0" prefWidth="149.0" styleClass="btn-validate" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css" text="Renvoyer" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="205.0" layoutY="16.0" prefHeight="527.0" prefWidth="837.0" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css">
+               <styleClass>
+                  <String fx:value="Shadow" />
+                  <String fx:value="White-bg" />
+               </styleClass>
+               <children>
+                  <TextField fx:id="searchFielHisAtt" layoutX="35.0" layoutY="14.0" onKeyTyped="#DemandesSearch" prefHeight="25.0" prefWidth="448.0" promptText="Search" styleClass="search" stylesheets="@../../../../../../../Projects/Projet_De_Genie_Logiciel/SystemeGestionDemandesEnsate/src/interfaces/application.css" />
+                  <TableView fx:id="historiques_TableView" layoutX="3.0" layoutY="52.0" prefHeight="532.0" prefWidth="1024.0">
+                     <columns>
+                        <TableColumn fx:id="historiques_TableView_App_col" prefWidth="75.0" text="Apogee" />
+                        <TableColumn fx:id="historiques_TableView_Nom_col" prefWidth="123.33331298828125" text="Nom" />
+                        <TableColumn fx:id="historiques_TableView_Pre_col" prefWidth="173.33331298828125" text="Prenom" />
+                        <TableColumn fx:id="historiques_TableView_Fil_col" prefWidth="121.0" text="Filiere" />
+                        <TableColumn fx:id="historiques_TableView_NivDoc_col" prefWidth="140.33331298828125" text="Niveau du document" />
+                        <TableColumn fx:id="historiques_TableView_Doc_col" prefWidth="180.111083984375" text="Document" />
+                        <TableColumn fx:id="historiques_TableView_Status_col" prefWidth="200.111083984375" text="status" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
